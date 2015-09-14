@@ -1,4 +1,4 @@
-require_relative '../lib/css_cleaner'
+require 'spec_helper'
 
 describe Css_Cleaner do
 
@@ -6,7 +6,7 @@ describe Css_Cleaner do
 
     context 'there is a css file' do
       it 'does some stuff' do
-
+        expect(1).to eq 1
       end
     end
 
@@ -16,11 +16,7 @@ describe Css_Cleaner do
       end
     end
 
-
   end
-
-
-
 
 end
 
