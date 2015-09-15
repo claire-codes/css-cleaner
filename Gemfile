@@ -7,4 +7,6 @@ group :test do
   gem 'nyan-cat-formatter'
   gem 'cucumber'
   gem 'rspec'
+  gem 'simplecov'
+  gem 'pry'
 end
