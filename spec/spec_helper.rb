@@ -2,7 +2,8 @@ require 'simplecov'
 require 'pry'
 
 # Load in source code
-$LOAD_PATH.unshift("#{__dir__}/lib")
+Dir["#{__dir__}/../lib/*.rb"].each { |f| require_relative f }
+
 # Start coverage
 SimpleCov.start
 

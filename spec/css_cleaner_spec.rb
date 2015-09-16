@@ -1,5 +1,3 @@
-require 'css_cleaner'
-
 describe Css_Cleaner do
 
   let (:subject) { described_class.new }
@@ -11,7 +9,7 @@ describe Css_Cleaner do
     context 'there is a css file' do
       it 'reads in the file' do
 
-        expect(subject.load_css_files).to eq(:expected_css)
+        expect(subject.load_css_files "../lib/").to eq(:expected_css)
       end
     end
 

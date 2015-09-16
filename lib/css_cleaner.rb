@@ -14,10 +14,10 @@ class Css_Cleaner
 
   #KF When this searches other projects, we'll want to make it take a parameter for the
   # file locations/point it at the external project... We should look at Rubocop
-  def load_css_files
+  def load_css_files dir
     binding.pry
     css_file_paths = []
-    Find.find("#{__dir__}../") do |path|
+    Find.find("#{dir}") do |path|
       binding.pry
       css_file_paths << path if path =~ /.*\.css$/
     end
