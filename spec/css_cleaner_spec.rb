@@ -15,7 +15,7 @@ describe Css_Cleaner do
 
     context "there isn't a css file" do
       it 'returns an error' do
-
+        #write some code
       end
     end
 
