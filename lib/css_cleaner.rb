@@ -15,7 +15,6 @@ class Css_Cleaner
   #KF When this searches other projects, we'll want to make it take a parameter for the
   # file locations/point it at the external project... We should look at Rubocop
   def load_css_files dir
-    binding.pry
     css_file_paths = []
     Find.find("#{dir}") do |path|
       binding.pry
@@ -23,6 +22,16 @@ class Css_Cleaner
     end
     puts css_file_paths
     css_file_paths
+  end
+
+
+  def load_html_file file_path
+    if File.extname(file_path).downcase != '.html' then return "Can't process: not HTML" end
+    begin
+      Nokogiri::HTML(open(file_path)) 
+    rescue
+      "File does not exist"
+    end
   end
 
 end
