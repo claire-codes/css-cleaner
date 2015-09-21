@@ -24,7 +24,7 @@ describe Css_Cleaner do
 
     context 'read in file' do
       it 'existing HTML file' do
-        expect(subject.load_html_file("spec/data/hello_world.html")).to be
+        #expect(subject.load_html_file("spec/data/hello_world.html")).to be
         expect(subject.load_html_file("spec/data/hello_world.html")).to be_a(Nokogiri::HTML::Document)
       end
 
@@ -38,15 +38,4 @@ describe Css_Cleaner do
     end
   end
 
-
-
-
 end
-
-
-#spec 1
-#locate css file (hardcode for now)
-#read in a css file
-#collection of css classes
-
-#spec 2
